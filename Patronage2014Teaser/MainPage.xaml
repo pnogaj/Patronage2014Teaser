@@ -75,7 +75,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="PATR"  FontFamily="Segoe WP Black" FontSize="72"/>
                 <Viewbox Height="80" Grid.Column="1" Margin="5,0">
-                        <Path 
+                        <Path x:Name="PatronageLogoPath"
                             Data="M 40.00,0.23
                                     C 45.35,0.07 49.05,1.04 54.00,3.09
                                     57.71,4.63 62.01,7.43 64.91,10.18
@@ -120,6 +120,8 @@
                         <ObjectAnimationUsingKeyFrames BeginTime="00:00:07" Storyboard.TargetName="PhoneButton" Storyboard.TargetProperty="Visibility">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
                         </ObjectAnimationUsingKeyFrames>
+                        <ColorAnimation Duration="00:00:03" Storyboard.TargetName="PatronageLogoPath" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)" To="#f6c15b" BeginTime="00:00:08" />
+                        <ColorAnimation Duration="00:00:03" Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="(Grid.Background).(SolidColorBrush.Color)" To="#51011a" BeginTime="00:00:08" />
                     </Storyboard>
                 </VisualState>
             </VisualStateGroup>
